@@ -147,6 +147,7 @@ def evaluation(logits, labels):
     with tf.variable_scope('accuracy') as scope:
         correct = tf.nn.in_top_k(logits, labels, 1)
         correct = tf.cast(correct, tf.float16)
+        
         accuracy = tf.reduce_mean(correct)
         tf.summary.scalar(scope.name+'/accuracy', accuracy)
     return accuracy
