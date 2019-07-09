@@ -150,3 +150,4 @@ def get_batch(image, label, image_W, image_H, batch_size, capacity):
     label_batch = tf.reshape(label_batch, [batch_size])
     image_batch = tf.cast(image_batch, tf.float32)
     return image_batch, label_batch   
+   
