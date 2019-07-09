@@ -91,4 +91,3 @@ except tf.errors.OutOfRangeError:
 finally:
     coord.request_stop()
     
-
